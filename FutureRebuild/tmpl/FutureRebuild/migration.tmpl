@@ -1,0 +1,26 @@
+<mt:setvarblock name="page_title"><__trans phrase="Upgrade to MovableType6 from FutureRebuild"></mt:setvarblock>
+<mt:include name="include/header.tmpl">
+
+<mt:if name="next">
+
+<mtapp:setting id="next_migration" label="<__trans phrase="Last Count">:">
+<mt:var name="last_count">
+</mtapp:setting>
+<script type="text/javascript">
+<!--
+setTimeout(function () {
+    document.location.href = '<$mt:var name="script_url"  encode_html=1$>?__mode=migration_future_unpublished';
+}, 500);
+-->
+</script>
+
+
+
+<mt:else>
+
+<p><__trans phrase="Finish"></p>
+
+</mt:if>
+
+<mt:include name="include/footer.tmpl">
+
